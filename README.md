@@ -38,7 +38,6 @@
 ### Association
 <!-- - has_many :comments -->
 - belongs_to :user
-- has_one :buy
 - has_one :history
 
 
@@ -67,11 +66,11 @@
 | address      | string     | null: false                    |
 | building     | string     |                                |
 | phone        | string     | null: false                    |
-| item         | references | null: false, foreign_key: true |
+| history      | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :item
+- belongs_to :history
 
 
 ## histories テーブル
@@ -80,8 +79,10 @@
 | ------- | ---------- | ------------------------------ |
 | user    | references | null: false, foreign_key: true |
 | item    | references | null: false, foreign_key: true |
+| buy     | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
 - belongs_to :item
+- has_one :buy
