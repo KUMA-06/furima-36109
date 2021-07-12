@@ -213,29 +213,29 @@
                 <mxCell id="553" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="552">
                     <mxGeometry width="30" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="554" value="code" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="552">
+                <mxCell id="554" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="552">
                     <mxGeometry x="30" width="170" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="555" value="postal　＃郵便番号" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="1">
-                    <mxGeometry x="830" y="260" width="170" height="30" as="geometry"/>
+                    <mxGeometry x="830" y="230" width="170" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="556" value="area_id　＃都道府県" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="1">
-                    <mxGeometry x="830" y="290" width="150" height="30" as="geometry"/>
+                    <mxGeometry x="830" y="260" width="150" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="557" value="municipality　＃市区町村" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="1">
-                    <mxGeometry x="830" y="320" width="150" height="30" as="geometry"/>
+                    <mxGeometry x="830" y="290" width="150" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="558" value="address　＃番地" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="1">
-                    <mxGeometry x="830" y="350" width="150" height="30" as="geometry"/>
+                    <mxGeometry x="830" y="320" width="150" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="559" value="building　＃建物名" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="1">
-                    <mxGeometry x="830" y="380" width="150" height="30" as="geometry"/>
+                    <mxGeometry x="830" y="350" width="150" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="560" value="phone　＃電話番号" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="1">
-                    <mxGeometry x="830" y="410" width="150" height="30" as="geometry"/>
+                    <mxGeometry x="830" y="380" width="150" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="563" value="Histories" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" vertex="1" parent="1">
-                    <mxGeometry x="280" y="10" width="200" height="130" as="geometry"/>
+                    <mxGeometry x="280" y="10" width="200" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="567" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="563">
                     <mxGeometry y="30" width="200" height="30" as="geometry"/>
@@ -261,8 +261,8 @@
                 <mxCell id="579" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.407;entryY=-0.009;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;startSize=30;endSize=30;" edge="1" parent="1" source="567" target="542">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="580" value="buy_id" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="1">
-                    <mxGeometry x="310" y="100" width="170" height="30" as="geometry"/>
+                <mxCell id="584" value="history_id" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="1">
+                    <mxGeometry x="830" y="410" width="170" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
