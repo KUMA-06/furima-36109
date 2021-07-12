@@ -17,6 +17,7 @@
 
 <!-- - has_many :comments -->
 - has_many :items
+- has_many :histories
 
 ## items テーブル
 
@@ -38,6 +39,7 @@
 <!-- - has_many :comments -->
 - belongs_to :user
 - has_one :buy
+- has_one :history
 
 
 ## comments テーブル
@@ -58,17 +60,28 @@
 
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
-| card_num     | integer    | null: false                    |
-| limit        | date       | null: false                    |
 | code         | integer    | null: false                    |
 | postal       | integer    | null: false                    |
-| prefecture   | string     | null: false                    |
+| area_id      | integer    | null: false                    |
 | municipality | string     | null: false                    |
 | address      | string     | null: false                    |
 | building     | string     |                                |
-| phone        | integer    | null: false                    |
+| phone        | string     | null: false                    |
 | item         | references | null: false, foreign_key: true |
 
 ### Association
 
+- belongs_to :item
+
+
+## histories テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user    | references | null: false, foreign_key: true |
+| item    | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
 - belongs_to :item
