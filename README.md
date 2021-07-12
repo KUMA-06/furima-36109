@@ -59,7 +59,6 @@
 
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
-| code         | integer    | null: false                    |
 | postal       | integer    | null: false                    |
 | area_id      | integer    | null: false                    |
 | municipality | string     | null: false                    |
