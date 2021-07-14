@@ -3,29 +3,25 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe 'ユーザー新規登録' do
     context '新規登録できるとき'
-    it 'nicknameが空では登録できない' do
-      # nicknameが空では登録できないテストコードを記述します
-    end
+      it 'nickname,email,password,password_confirmation,last_name,first_name,last_katakana,first_katakana,birthdayが存在すれば登録できる' do
+        # nicknameが空では登録できないテストコードを記述します
+      end
 
-    it 'nicknameが空では登録できない' do
-      # nicknameが空では登録できないテストコードを記述します
-    end
+      it 'passwordが６文字以上かつ英数字混合なら登録できる' do
+        # nicknameが空では登録できないテストコードを記述します
+      end
 
-    it 'nicknameが空では登録できない' do
-      # nicknameが空では登録できないテストコードを記述します
-    end
+      it 'passwordとpassword_confirmationが一致すれば登録できる' do
+        # nicknameが空では登録できないテストコードを記述します
+      end
 
-    it 'nicknameが空では登録できない' do
-      # nicknameが空では登録できないテストコードを記述します
-    end
+      it 'last_name,first_nameが全角文字なら登録できる' do
+        # nicknameが空では登録できないテストコードを記述します
+      end
     
-    it 'nicknameが空では登録できない' do
-      # nicknameが空では登録できないテストコードを記述します
-    end
-
-    it 'nicknameが空では登録できない' do
-      # nicknameが空では登録できないテストコードを記述します
-    end
+      it 'last_katakana,first_katakanaが全角カタカナなら登録できる' do
+        # nicknameが空では登録できないテストコードを記述します
+      end
 
     end
     context '新規登録できないとき'
@@ -57,6 +53,10 @@ RSpec.describe User, type: :model do
         # emailが空では登録できないテストコードを記述します
       end
       
+      it 'password_confirmationが空では登録できない' do
+        # emailが空では登録できないテストコードを記述します
+      end
+
       it 'passwordがpassword_confirmationと一致しなければ登録できない' do
         # emailが空では登録できないテストコードを記述します
       end
