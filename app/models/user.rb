@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :first_katakana, presence: true
   validates :birthday, presence: true
 
-  has_many :items
-  has_many :histories
+  # has_many :items
+  # has_many :histories
 
 end
