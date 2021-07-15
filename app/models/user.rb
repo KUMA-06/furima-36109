@@ -16,6 +16,6 @@ class User < ApplicationRecord
   end
   validates :password, format: { with: PASSWORD_REGEX }
 
-  # has_many :items
+  has_many :items
   # has_many :histories
 end
