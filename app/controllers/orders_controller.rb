@@ -42,6 +42,8 @@ class OrdersController < ApplicationController
   def redirect_check
     if current_user.id == @item.user_id
       redirect_to root_path
+    elsif @item.history.present?
+      redirect_to root_path
     end
-  end
+   end
 end
