@@ -1,12 +1,15 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
+  before_action :item_find
+  before_action :redirect_check
 
   def index
-    @item = Item.find(params[:item_id])
+    item_find
     @history_buy = HistoryBuy.new
   end
 
   def create
-    @item = Item.find(params[:item_id])
+    item_find
     @history_buy = HistoryBuy.new(history_buy_params)
     if @history_buy.valid?
       pay_item
@@ -30,5 +33,15 @@ class OrdersController < ApplicationController
       card: history_buy_params[:token],
       currency: 'jpy'
     )
+  end
+
+  def item_find
+    @item = Item.find(params[:item_id])
+  end
+
+  def redirect_check
+    if current_user.id == @item.user_id
+      redirect_to root_path
+    end
   end
 end
