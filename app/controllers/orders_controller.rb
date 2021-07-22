@@ -23,11 +23,13 @@ class OrdersController < ApplicationController
   private
 
   def history_buy_params
-    params.require(:history_buy).permit(:postal, :area_id, :municipality, :address, :building, :phone, :price).merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
+    params.require(:history_buy).permit(:postal, :area_id, :municipality, :address, :building, :phone, :price).merge(
+      user_id: current_user.id, item_id: params[:item_id], token: params[:token]
+    )
   end
 
   def pay_item
-    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(
       amount: history_buy_params[:price],
       card: history_buy_params[:token],
@@ -45,5 +47,5 @@ class OrdersController < ApplicationController
     elsif @item.history.present?
       redirect_to root_path
     end
-   end
+  end
 end
