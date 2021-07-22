@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
   private
 
   def history_buy_params
-    params.require(:history_buy).permit(:postal, :area_id, :municipality, :address, :building, :phone, :price).merge(
+    params.require(:history_buy).permit(:postal, :area_id, :municipality, :address, :building, :phone).merge(
       user_id: current_user.id, item_id: params[:item_id], token: params[:token]
     )
   end
@@ -29,7 +29,7 @@ class OrdersController < ApplicationController
   def pay_item
     Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(
-      amount: history_buy_params[:price],
+      amount: @item.price,
       card: history_buy_params[:token],
       currency: 'jpy'
     )
