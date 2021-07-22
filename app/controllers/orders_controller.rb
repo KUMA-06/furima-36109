@@ -4,12 +4,10 @@ class OrdersController < ApplicationController
   before_action :redirect_check
 
   def index
-    item_find
     @history_buy = HistoryBuy.new
   end
 
   def create
-    item_find
     @history_buy = HistoryBuy.new(history_buy_params)
     if @history_buy.valid?
       pay_item

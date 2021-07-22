@@ -1,6 +1,6 @@
 class HistoryBuy
   include ActiveModel::Model
-  attr_accessor :postal, :area_id, :municipality, :address, :building, :phone, :user_id, :item_id, :token, :price
+  attr_accessor :postal, :area_id, :municipality, :address, :building, :phone, :user_id, :item_id, :token
 
   with_options presence: true do
     validates :token

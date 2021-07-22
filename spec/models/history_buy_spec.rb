@@ -44,6 +44,12 @@ RSpec.describe HistoryBuy, type: :model do
         expect(@history_buy.errors.full_messages).to include('Postal is invalid. Include hyphen(-)')
       end
 
+      it 'postalはハイフンがないと購入できないこと' do
+        @history_buy.postal = '1231234'
+        @history_buy.valid?
+        expect(@history_buy.errors.full_messages).to include('Postal is invalid. Include hyphen(-)')
+      end
+
       it 'area_idが空だと購入できないこと' do
         @history_buy.area_id = 1
         @history_buy.valid?
@@ -68,6 +74,12 @@ RSpec.describe HistoryBuy, type: :model do
         expect(@history_buy.errors.full_messages).to include("Phone can't be blank")
       end
 
+      it 'phoneが英数混合だと購入できないこと' do
+        @history_buy.phone = '090abcd1234'
+        @history_buy.valid?
+        expect(@history_buy.errors.full_messages).to include("Phone is invalid")
+      end
+
       it 'phoneが全角だと購入できないこと' do
         @history_buy.phone = '０９０１２３４５６７８'
         @history_buy.valid?
@@ -84,6 +96,18 @@ RSpec.describe HistoryBuy, type: :model do
         @history_buy.phone = '0901234567890'
         @history_buy.valid?
         expect(@history_buy.errors.full_messages).to include('Phone is invalid')
+      end
+
+      it 'userが存在しないと購入できないこと' do
+        @history_buy.user_id = nil
+        @history_buy.valid?
+        expect(@history_buy.errors.full_messages).to include("User can't be blank")
+      end
+
+      it 'itemが存在しないと購入できないこと' do
+        @history_buy.item_id = nil
+        @history_buy.valid?
+        expect(@history_buy.errors.full_messages).to include("Item can't be blank")
       end
     end
   end
